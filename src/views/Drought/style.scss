@@ -1,0 +1,88 @@
+// 页面左侧
+.home-left {
+  // border: 1px solid #000;
+  display: flex;
+  position: absolute;
+  width: 4.2rem;
+  top: 0.6rem;
+  left: 0.1rem;
+  height: calc(100% - 0.7rem);
+  bottom: 0.1rem;
+  padding: 0 0.1rem;
+  border-radius: 0.08rem 0 0.08rem 0.08rem;
+  background-color: #fff;
+  transition: all 0.5s;
+
+  //水质监测echart
+
+  .left-content {
+    display: flex;
+    flex-direction: column;
+    width: 4rem;
+    height: 100%;
+
+    .left-item {
+      width: 4rem;
+      height: calc(96% / 3);
+      margin-top: 0.1rem;
+      //background-image: url('../../../static/images/MonitorSys/bg_monitorsys.png');
+      background-size: 100% 100%;
+      transition: 0.5s;
+      box-sizing: border-box;
+
+      &-warn {
+        //background-image: url('../../../static/images/MonitorSys/bg_monitorsys1.png');
+        background-size: 100% 100%;
+      }
+      .title {
+        line-height: 0.36rem;
+        height: 0.36rem;
+        padding: 0 0.1rem;
+
+        .iconfont {
+          font-size: 0.22rem;
+          margin: 0 0.15rem;
+          color: #00b4ff;
+        }
+        .icongaojing {
+          color: #f95843;
+        }
+        span {
+          font-size: 0.18rem;
+          line-height: 0.34rem;
+          font-weight: bold;
+          color: #4287ef;
+          margin-left: 0.25rem;
+        }
+        .warn {
+          color: #f95843;
+        }
+      }
+      .info {
+        height: calc(100% - 0.36rem);
+        line-height: 0.2rem;
+        font-size: 0.14rem;
+        padding-left: 0.1rem;
+        overflow: hidden;
+        ul {
+          margin: 0.03rem;
+          padding: 0.06rem 0 0 0;
+          li {
+            padding-bottom: 0.03rem;
+          }
+        }
+      }
+      #water-echatrs,
+      #class-statistic {
+        width: 98%;
+        height: calc(100% - 0.36rem);
+        margin: 0 0.1rem 0.1rem 0.1rem;
+      }
+    }
+  }
+
+  .close {
+    top: 0;
+    left: 4.2rem;
+  }
+}

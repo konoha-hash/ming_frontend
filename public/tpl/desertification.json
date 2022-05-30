@@ -1,0 +1,353 @@
+{
+  "id": "8a87973e626f6c3501626f6ca6340000",
+  "createAt": "2021-07-19 15:40:13",
+  "updateAt": "2021-07-19 15:40:13",
+  "enabled": true,
+  "title": "desert",
+  "projection": "EPSG:4326",
+  "regionCode": "",
+  "regionName": "",
+  "target": "map-container",
+  "geoserverWorkspace": "ja",
+  "content": {
+    "globalMode": "2D",
+    "map": {
+      "globalLayer": [],
+      "baseLayers": [
+        {
+          "id": "0158336bce132v9282de583367510106",
+          "alias": "天地图矢量",
+          "name": "vec_w",
+          "type": "tms",
+          "url": "http://t{0-7}.tianditu.com/DataServer?T=vec_w&x={x}&y={y}&l={z}&tk=9bdda0abc4530682cdbd4fa69d1ef9ec"
+        },
+        {
+          "id": "0158336bce132v9282de583367510107",
+          "alias": "天地图注记",
+          "name": "cva_w",
+          "type": "tms",
+          "url": "http://t{0-7}.tianditu.com/DataServer?T=cva_w&x={x}&y={y}&l={z}&tk=9bdda0abc4530682cdbd4fa69d1ef9ec"
+        },
+        {
+          "id": "0158336bce132v9282de583367510107",
+          "alias": "天地图影像",
+          "name": "img_w",
+          "type": "tms",
+          "url": "http://t{0-7}.tianditu.com/DataServer?T=img_w&x={x}&y={y}&l={z}&tk=9bdda0abc4530682cdbd4fa69d1ef9ec"
+        },
+        {
+          "id": "0158336bce132v9282de583367510107",
+          "alias": "test",
+          "name": "test",
+          "type": "wms",
+          "url": "http://localhost:7070/geoserver/nmg/wms"
+        }
+      ],
+      "options": {
+        "center": [116.023, 43.816],
+        "zoom": 17
+      }
+    },
+    "widgets": [
+      {
+        "id": "data-list",
+        "name": "图层",
+        "visible": true,
+        "layers": [
+          {
+            "id": "0158336bce132v9282de583367510107",
+            "alias": "河湖信息",
+            "name": "water_source",
+            "icon": "iconhehuxinxi-xuan",
+            "count": "89个",
+            "type": "wms",
+            "active": "color1",
+            "url": "",
+            "click": true,
+            "visible": true,
+            "info": {
+              "title": "HHMC",
+              "field": {
+                "HDMC": {"name":"河段名称",
+                  "type": "string"
+                },
+                "HHMC": {"name":"河湖名称",
+                  "type": "string"
+                },
+                "LXMC": {"name":"类型",
+                  "type": "string"
+                },
+                "负责人": {"name":"负责人",
+                  "type": "string"
+                },
+                "Area": {"name":"面积（km²）",
+                  "type": "number"
+                }
+              }
+            }
+          },
+          {
+            "id": "0158336bce132v9282de583367510107",
+            "alias": "水功能区",
+            "name": "water_gnq",
+            "icon": "iconshuigongnengqu-xuan",
+            "count": "0个",
+            "type": "wms",
+            "active": "color2",
+            "url": "",
+            "visible": false
+          },
+          {
+            "id": "0158336bce132v9282de583367510107",
+            "alias": "饮用水源地",
+            "name": "waterSource",
+            "icon": "iconyinyongshuiyuan-xuan",
+            "count": "2个",
+            "active": "color3",
+            "type": "pointVector",
+            "url": "",
+            "visible": true,
+            "click": true,
+            "info": {
+              "title": "饮用水源地",
+              "field": {
+                "name": {"name":"名称",
+                  "type": "string"
+                }
+              }
+            }
+          },
+          {
+            "id": "0158336bce132v9282de583367510107",
+            "alias": "入河排污口",
+            "name": "riverPollution",
+            "icon": "iconruhepaiwukou-xuan",
+            "count": "12个",
+            "type": "pointVector",
+            "active": "color4",
+            "url": "",
+            "data": "outletDirtyWater",
+            "visible": false,
+            "click": true,
+            "info": {
+              "title": "入河排污口",
+              "field": {
+                "name": {"name":"名称",
+                  "type": "string"
+                },
+                "position": {"name":"位置",
+                  "type": "string"
+                },
+                "pollute": {"name":"污染物",
+                  "type": "string"
+                },
+                "factory": {"name":"污水处理工厂",
+                  "type": "string"
+                }
+              }
+            }
+          },
+          {
+            "id": "0158336bce132v9282de583367510107",
+            "alias": "水域岸线",
+            "name": "water_SYAX",
+            "icon": "iconshuiyuanxian-xuan",
+            "count": "12条",
+            "active": "color5",
+            "type": "wms",
+            "url": "",
+            "click": true,
+            "visible": false,
+            "info": {
+              "title": "HHMC",
+              "field": {
+                "HDMC": {"name":"河段名称",
+                  "type": "string"
+                },
+                "HHMC": {"name":"河湖名称",
+                  "type": "string"
+                },
+                "LXMC": {"name":"类型",
+                  "type": "string"
+                },
+                "负责人": {"name":"负责人",
+                  "type": "string"
+                },
+                "Area": {"name":"面积（km²）",
+                  "type": "number"
+                }
+              }
+            }
+          },
+          {
+            "id": "0158336bce132v9282de583367510107",
+            "alias": "采砂管理",
+            "name": "sandManage",
+            "icon": "iconcaishaguanli-xuan",
+            "count": "0处",
+            "active": "color6",
+            "type": "wms",
+            "url": "",
+            "visible": false
+          },
+          {
+            "id": "0158336bce132v9282de583367510107",
+            "alias": "水利工程",
+            "name": "waterProject",
+            "icon": "iconshuiligongcheng-xuan",
+            "count": "12处",
+            "active": "color7",
+            "type": "pointVector",
+            "url": "",
+            "visible": false,
+            "click": true,
+            "info": {
+              "title": "水利工程",
+              "field": {
+                "projectName": {"name":"项目名称",
+                  "type": "string"
+                },
+                "buildLocal": {"name":"建设地点名称",
+                  "type": "string"
+                },
+                "riverName": {"name":"所在河流",
+                  "type": "string"
+                },
+                "content": {"name":"建设内容",
+                  "type": "string"
+                },
+                "orgName": {"name":"工程主管部门",
+                  "type": "string"
+                },
+                "fxTechMan": {"name":"防汛技术责任人",
+                  "type": "string"
+                },
+                "fxAdminMan": {"name":"防汛行政责任人",
+                  "type": "string"
+                }
+              }
+            }
+          },
+          {
+            "id": "0158336bce132v9282de583367510107",
+            "alias": "水环境监测点",
+            "name": "envMonitorPoin",
+            "icon": "iconshuihuanjingjiance-xuan",
+            "count": "9个",
+            "type": "pointVector",
+            "active": "color8",
+            "url": "",
+            "data": "",
+            "visible": false,
+            "click": true,
+            "info": {
+              "title": "水环境监测点",
+              "field": {
+                "name": {"name":"站名",
+                  "type": "string"
+                },
+                "stationAddress": {"name":"地址",
+                  "type": "string"
+                }
+              }
+            }
+          },
+          {
+            "id": "0158336bce132v9282de583367510107",
+            "alias": "水库信息",
+            "name": "reservoirInfo",
+            "icon": "iconshuikuxinxi-xuan",
+            "count": "31座",
+            "type": "pointVector",
+            "active": "color9",
+            "url": "",
+            "data": "reservoirPoint",
+            "visible": false,
+            "click": true,
+            "info": {
+              "title": "水库信息",
+              "field": {
+                "name": {"name":"名称",
+                  "type": "string"
+                },
+                "storage": {"name":"库容",
+                  "type": "string"
+                },
+                "area": {"name":"面积(km²)",
+                  "type": "string"
+                }
+              }
+            }
+          },
+          {
+            "id": "0158336bce132v9282de583367510107",
+            "alias": "污染企业分布",
+            "name": "polluteEnterprises",
+            "icon": "iconwuranqiye-xuan",
+            "count": "20家",
+            "type": "pointVector",
+            "active": "color10",
+            "url": "",
+            "data": "pollutingEnterprise",
+            "visible": false,
+            "click": true,
+            "info": {
+              "title": "污染企业分布",
+              "field": {
+                "name": {"name":"名称",
+                  "type": "string"
+                }
+              }
+            }
+          },
+          {
+            "id": "0158336bce132v9282de583367510107",
+            "alias": "养殖企业分布",
+            "name": "breedEnterprises",
+            "icon": "iconyangzhiqiye-xuan",
+            "count": "12家",
+            "type": "pointVector",
+            "active": "color11",
+            "url": "",
+            "data": "cultivationEnterprise",
+            "visible": false,
+            "click": true,
+            "info": {
+              "title": "养殖企业分布",
+              "field": {
+                "name": {"name":"名称",
+                  "type": "string"
+                }
+              }
+            }
+          },
+          {
+            "id": "0158336bce132v9282de583367510107",
+            "alias": "地下管网分布",
+            "name": "gw_line",
+            "icon": "icondixiaguanwang-xuan",
+            "count": "60条",
+            "active": "color12",
+            "type": "wms",
+            "url": "",
+            "click": true,
+            "visible": false,
+            "info": {
+              "title": "Layer",
+              "field": {
+                "Layer": {"name":"管线类型",
+                  "type": "string"
+                },
+                "LineWt": {"name":"管线宽度（厘米）",
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "tools": [],
+    "controls": []
+  }
+}

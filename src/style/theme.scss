@@ -1,0 +1,107 @@
+// 颜色
+$border-color: rgba(42, 92, 177, 1);
+$main-color: #448cf1;
+
+@mixin tipText {
+  font-size: 0.18rem;
+  font-weight: 500;
+}
+
+@mixin itemTitle {
+  line-height: 0.56rem;
+  color: #000919;
+  font-weight: bold;
+  font-size: 0.2rem;
+  margin-left: 0.1rem;
+}
+
+@mixin hidenIcon {
+  width: 0.18rem;
+  height: 0.18rem;
+}
+@mixin bottom {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  bottom: 0.05rem;
+  right: 0.1rem;
+}
+// 页面的关闭按钮
+.close {
+  position: absolute;
+  width: 0.28rem;
+  height: 0.56rem;
+  background: #ffffff;
+  padding: 0.1rem 0;
+  cursor: pointer;
+
+  &-left {
+    border-radius: 0 0.04rem 0.04rem 0;
+  }
+  &-right {
+    border-radius: 0.04rem 0 0 0.04rem;
+  }
+  .iconfont {
+    font-size: 0.13rem;
+    line-height: 0.4rem;
+    font-weight: 600;
+    color: #4186ef;
+    margin-left: 0.08rem;
+  }
+}
+// 底部的关闭按钮
+.bottom-close {
+  position: absolute;
+  top: -0.25rem;
+  width: 0.56rem;
+  height: 0.25rem;
+  padding-top: 0.03rem;
+  border-radius: 0.04rem 0.04rem 0 0;
+  text-align: center;
+  background: #fff;
+  cursor: pointer;
+
+  .iconfont {
+    font-size: 0.13rem;
+    font-weight: 600;
+    color: #4186ef;
+  }
+}
+
+.close-icon {
+  width: 0.2rem;
+  height: 0.2rem;
+}
+.rotate {
+  transform: rotate(180deg);
+}
+// 图例标题
+.legend-title {
+  line-height: 0.25rem;
+  font-size: 0.16rem;
+  font-weight: 500;
+  text-align: center;
+}
+.dialog-title {
+  margin-bottom: 0.2rem;
+  text-align: center;
+  font-size: 0.25rem;
+  font-weight: 600;
+  color: #448cf1;
+}
+// 树的样式
+.tree-style {
+  .el-tree-node__content {
+    height: 0.43rem;
+    line-height: 0.4rem;
+    color: #686868;
+    font-weight: 500;
+  }
+
+  .el-tree-node__expand-icon.expanded {
+    color: rgba(40, 40, 40, 1);
+    font-size: 0.18rem;
+  }
+}
