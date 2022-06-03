@@ -17,6 +17,8 @@ import OLWMS from './OLWMS';
 import * as layersUtils from '@/utils/OLMap/Layers/index';
 import mapConfig from './mapConfig';
 import defaultTpl from '../../../public/tpl/default.json';
+import {Vector as VectorSource } from "ol/source"
+import {Vector as VectorLayer} from "ol/layer";
 
 const {
   target, projection, center, zoom, onlineTdtLayers
@@ -118,37 +120,47 @@ class OLMap {
     let oLWMS;
 
     switch (type) {
-    case 'tms':
-      layer = new TileLayer({
-        source: new XYZ({
-          title: alias,
-          url: url,
-          maxZoom: 16
-        }),
-        zIndex: index === null ? 0: index,
-        visible: visible,
-        className: name
-      });
-      layer.set('name', name);
-      layer.set('group', group);
-      this.map.addLayer(layer);
-      return layer;
-    case 'wms':
-      // 加载矢量边界
-      oLWMS = new OLWMS(this.map);
-
-      layer = oLWMS.addWMSLayer({
-        ...item,
-        url: item?.url === '' ? process.env.VUE_APP_GEOSERVER_IP : item?.url,
-        params: {
-          layers: item?.name
-        }
-      });
-      oLWMS.WMSLayers.set('name', name);
-
-      return layer;
-    default:
-      break;
+      case 'tms':
+        layer = new TileLayer({
+          source: new XYZ({
+            title: alias,
+            url: url,
+            maxZoom: 16
+          }),
+          zIndex: index === null ? 0: index,
+          visible: visible,
+          className: name
+        });
+        layer.set('name', name);
+        layer.set('group', group);
+        this.map.addLayer(layer);
+        return layer;
+      case 'wms':
+        // 加载矢量边界
+        oLWMS = new OLWMS(this.map);
+        layer = oLWMS.addWMSLayer({
+          ...item,
+          url: item?.url === '' ? process.env.VUE_APP_GEOSERVER_IP : item?.url,
+          params: {
+            layers: item?.name
+          }
+        });
+        oLWMS.WMSLayers.set('name', name);
+        return layer;
+      case 'geojson':
+        // lswlsw
+        oLWMS = new VectorLayer(this.map);
+        layer = oLWMS.addWMSLayer({
+          ...item,
+          url: item?.url === '' ? process.env.VUE_APP_GEOSERVER_IP : item?.url,
+          params: {
+            layers: item?.name
+          }
+        });
+        oLWMS.WMSLayers.set('name', name);
+        return layer;
+      default:
+        break;
     }
   };
 

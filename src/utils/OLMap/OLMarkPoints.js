@@ -224,7 +224,7 @@ class OLMarkPoints {
 
     });
 
-    const polygonFeature = new GeoJSON().readFeature(feature);
+    const polygonFeature = new GeoJSON().readFeatures(feature);
 
     this.map.map.getLayers()
       .forEach((layer) => {

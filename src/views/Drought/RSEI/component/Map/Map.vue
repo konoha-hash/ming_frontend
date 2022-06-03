@@ -33,7 +33,6 @@ export default {
     // })
     this.$nextTick(()=>{
       this.olMap = this.params.olMap;
-      console.log(this.olMap);
     })
   },
   methods:{

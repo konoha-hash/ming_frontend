@@ -181,6 +181,9 @@ export default {
       if(this.daterange !== null && this.value1 !== null && this.value2 !== null){
         const param = this.getDataPram(this.daterange);
         axios.post("http://localhost:8881/RSEI/getData",param).then((res) =>{
+
+          const {code,data} = res.data;
+
           if (code == "200"){
 
             this.$message.success('数据获取成功！');

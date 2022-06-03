@@ -76,6 +76,10 @@ const routes = [
         component: () => import('../views/Drought/RSEI/RSEIanalysis'),
       },
     ]
+  },{
+    path: '/bigScreen',
+    name:'大屏页面',
+    component: () => import('../views/BigScreen/home'),
   },
   {
     path: '/about',
